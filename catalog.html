@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Каталог парфюмерии ESSENZA"><title>Каталог — ESSENZA</title><link rel="stylesheet" href="css/styles.css"></head>
+<body data-page="catalog"><a class="skip-link" href="#main">К содержимому</a><div id="site-header"></div>
+<main id="main" class="catalog-page container">
+  <header class="page-title"><p class="eyebrow">Парфюмерная библиотека</p><div><h1>Каталог</h1><span class="catalog-total">326 ароматов в полной коллекции</span></div></header>
+  <div class="catalog-toolbar"><div class="quick-filters" role="group" aria-label="Быстрые фильтры"><button class="chip is-active" data-quick="all">Все</button><button class="chip" data-quick="new">Новинки</button><button class="chip" data-quick="bestseller">Bestseller</button><button class="chip" data-quick="niche">Niche</button></div><button class="filter-open button button--line">Фильтры <span id="filter-count"></span></button></div>
+  <div class="catalog-layout">
+    <aside class="filters" id="filters" aria-label="Фильтры каталога"><div class="filters__head"><h2>Фильтры</h2><button class="icon-button filter-close" aria-label="Закрыть фильтры">×</button></div>
+      <label class="filter-search"><span>Поиск</span><input id="catalog-search" type="search" placeholder="Название, бренд или нота"></label>
+      <details open><summary>Бренд</summary><div id="brand-filters" class="check-list"></div></details>
+      <details open><summary>Для кого</summary><div class="check-list"><label><input type="checkbox" name="gender" value="Для неё"> Для неё</label><label><input type="checkbox" name="gender" value="Для него"> Для него</label><label><input type="checkbox" name="gender" value="Unisex"> Unisex</label></div></details>
+      <details><summary>Семейство</summary><label><span class="sr-only">Семейство</span><select id="family-filter"><option value="">Все семейства</option><option value="древес">Древесные</option><option value="цвет">Цветочные</option><option value="гурман">Гурманские</option><option value="аромат">Ароматические</option></select></label></details>
+      <details><summary>Ноты</summary><label><span class="sr-only">Нота</span><input id="note-filter" type="search" placeholder="Например, вишня"></label></details>
+      <details><summary>Объём</summary><p class="filter-note mode-sizes">2 · 5 · 10 · 20 · 30 · 50 мл</p></details><details><summary>Цена</summary><label class="range-label">До <output id="price-output">13 000 ₽</output><input id="price-filter" type="range" min="1000" max="13000" value="13000" step="500"></label></details><details><summary>Сезон</summary><label><select id="season-filter"><option value="">Любой сезон</option><option>Весна</option><option>Лето</option><option>Осень</option><option>Зима</option></select></label></details>
+      <button id="reset-filters" class="text-button">Сбросить всё</button><button class="button button--dark filters__apply filter-close">Показать ароматы</button>
+    </aside>
+    <section class="catalog-results"><div class="results-head"><p><strong id="result-count">12</strong> ароматов</p><label>Сортировка <select id="sort-products"><option value="popular">Популярные</option><option value="low">Сначала дешевле</option><option value="high">Сначала дороже</option><option value="name">По названию</option></select></label></div><div id="catalog-grid" class="product-grid"></div><div id="empty-state" class="empty-state" hidden><h2>Ничего не нашли</h2><p>Попробуйте убрать часть фильтров или изменить запрос.</p><button class="button button--dark" id="empty-reset">Сбросить фильтры</button></div></section>
+  </div>
+</main><div id="site-footer"></div><div id="ui-layer"></div><script src="js/data.js"></script><script src="js/app.js"></script><script src="js/catalog.js"></script></body></html>
